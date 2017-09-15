@@ -47,5 +47,13 @@ body {
     text-align: left;
     cursor: crosshair;
     border: solid black 10px;
-    background-color: white;
+    background-image: url(../images/arenaBackgroundImage.jpg);
+    background-size: 880px 550px;
+    background-repeat: none;
+    overflow: hidden;
 }
+
+
+
+
+
