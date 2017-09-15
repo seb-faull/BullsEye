@@ -2,7 +2,7 @@ $(function() {
 
 	console.log('Dom has loaded');
 
-	animateDiv()
+	// animateDiv()
 
 	$('.green-target').on('click', function (event) {
 		console.log('Greens been clicked');
@@ -22,7 +22,10 @@ $(function() {
 
 	});
 
-
+	$('.target').each(function (i, el) {
+		
+		animateDiv($(this));
+	});
 
 
 });
@@ -41,18 +44,10 @@ function makeNewPosition(){
     
 }
 
-function animateDiv () {
+function animateDiv ($el) {
 	var newq = makeNewPosition();
-	$('.green-target').animate({ top: newq[0], left: newq[1] }, function(){
-		animateDiv();
-	})
-
-	$('.blue-target').animate({ top: newq[0], left: newq[1] }, function(){
-		animateDiv();
-	})
-
-	$('.red-target').animate({ top: newq[0], left: newq[1] }, function(){
-		animateDiv();
+	$el.animate({ top: newq[0], left: newq[1] }, function(){
+		animateDiv($el);
 	})
 }
 
