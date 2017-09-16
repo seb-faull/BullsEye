@@ -9,19 +9,19 @@ $(function() {
 	$('.green-target').on('click', function (event) {
 		console.log('Greens been clicked');
 		var $greenTarget = $('.green-target');
-		updateScore(1);
+		$('#points').html(function(i, val) { return val * 1 + 1 });
 	});
 
 	$('.blue-target').on('click', function (event) {
 		console.log('Blues been clicked!');
 		var $blueTarget = $('.blue-target');
-		updateScore(2);
+		$('#points').html(function(i, val) { return val * 1 + 2 });
 	});
 
 	$('.red-target').on('click', function (event) {
 		console.log('Reds been clicked!');
 		var $redTarget = $('.red-target');
-		updateScore(3);
+		$('#points').html(function(i, val) { return val * 1 + 3 });
 	});
 
 	// Random animate path for each target element
@@ -56,9 +56,9 @@ function animateDiv($el) {
 }
 
 
-function updateScore(quantity) {
-	points = points + quantity;
-	$('#points').html(points);
+function updateScore(/*quantity*/) {
+	// points = points + quantity;
+	// $('#points').html(points);
 }
 
 // function shotTarget(targetNum) {
