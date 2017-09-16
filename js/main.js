@@ -1,8 +1,6 @@
 $(function() {
 
-	console.log('Dom has loaded');
-
-	// animateDiv()
+	//console.log('Dom has loaded');
 
 	$('.green-target').on('click', function (event) {
 		console.log('Greens been clicked');
@@ -22,6 +20,7 @@ $(function() {
 
 	});
 
+	// Random animate path for each target element
 	$('.target').each(function (i, el) {
 		
 		animateDiv($(this));
@@ -34,8 +33,8 @@ $(function() {
 function makeNewPosition(){
     
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $('#arena').height() - 50;
-    var w = $('#arena').width() - 50;
+    var h = $('#target-arena').height() - 150;
+    var w = $('#target-arena').width() - 50;
     
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
