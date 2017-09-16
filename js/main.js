@@ -6,13 +6,10 @@ $(function() {
 	var points = 0
 
 
-
-
 	$('.green-target').on('click', function (event) {
 		console.log('Greens been clicked');
 		var $greenTarget = $('.green-target');
 		updateScore(1);
-
 	});
 
 	$('.blue-target').on('click', function (event) {

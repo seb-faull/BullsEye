@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SF Archery Black";
+  src: url("../fonts/bullsEye.ttf"); /*Only compatable with CSS3 browsers*/
+}
+
 body {
 	background-color: black;
 	color: black;
@@ -6,92 +11,96 @@ body {
 }
 
 .green-target {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background-color: #00ff0a;
-    border-radius: 100%;
-    bottom: 350px;
-    left: 330px;
-    cursor: crosshair;
-    -moz-user-select: none;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background-color: #00ff0a;
+  border-radius: 100%;
+  bottom: 350px;
+  left: 330px;
+  cursor: crosshair;
+  -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
 }
 
 .blue-target {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    background-color: #00c4ff;
-    border-radius: 100%;
-   	bottom: 380px;
-    left: 550px;
-    cursor: crosshair;
-    -moz-user-select: none;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #00c4ff;
+  border-radius: 100%;
+ 	bottom: 380px;
+  left: 550px;
+  cursor: crosshair;
+  -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
 }
 
 .red-target {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-color: #ff0000;
-    border-radius: 100%;
-    bottom: 480px;
-    left: 780px;
-    cursor: crosshair;
-    -moz-user-select: none;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #ff0000;
+  border-radius: 100%;
+  bottom: 480px;
+  left: 780px;
+  cursor: crosshair;
+  -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
 }
 
 #target-arena {
-    position: relative;
-    width: 1000px;
-    height: 550px;
-    margin: 50px auto 0 auto;
-    text-align: left;
-    cursor: crosshair;
-    overflow: hidden;
+  position: relative;
+  width: 1000px;
+  height: 550px;
+  margin: 50px auto 0 auto;
+  text-align: left;
+  cursor: crosshair;
+  overflow: hidden;
 }
 
 #arena {
-    position: relative;
-    width: 1000px;
-    height: 685px;
-    margin: 50px auto 0 auto;
-    text-align: left;
-    cursor: crosshair;
-    border: solid black 10px;
-    background-image: url(../images/arenaBackgroundImage.jpg);
-    background-size: 1000px 685px;
-    background-repeat: none;
-    overflow: hidden;
+  position: relative;
+  width: 1000px;
+  height: 685px;
+  margin: 50px auto 0 auto;
+  text-align: left;
+  cursor: crosshair;
+  border: solid black 10px;
+  background-image: url(../images/arenaBackgroundImage.jpg);
+  background-size: 1000px 685px;
+  background-repeat: none;
+  overflow: hidden;
 }
 
 #score-container {
-	display: inline-block;
-	position: absolute;
-    right: 50px;
-    bottom: -7px;
-  	font-size: 35px;
-  	width: 220px;
-  	height:110px;
-  	margin-right: 0;
+  display: inline-block;
+  position: absolute;
+  right: 50px;
+  bottom: 2px;
+	font-size: 35px;
+  font-family: "SF Archery Black SC Shaded";
+  color: black;
+	width: 220px;
+	height:110px;
+	margin-right: 0;
   -moz-user-select: none;
   -webkit-user-select: none;
-  	user-select: none;
+	user-select: none;
 }
 
 #score-container h2 {
-  	width: auto;
-  	padding-right: 0;
-  	margin-right: 0;
+	width: auto;
+  font-family: "SF Archery Black";
+  color: black;
+	padding-right: 0;
+	margin-right: 0;
   -moz-user-select: none;
   -webkit-user-select: none;
-  	user-select: none;
+	user-select: none;
 }
 
 
