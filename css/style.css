@@ -71,6 +71,40 @@ body {
     overflow: hidden;
 }
 
+#score-container {
+	display: inline-block;
+	position: absolute;
+    right: 50px;
+    bottom: -7px;
+  	font-size: 35px;
+  	width: 220px;
+  	height:110px;
+  	margin-right: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  	user-select: none;
+}
+
+#score-container h2 {
+  	width: auto;
+  	padding-right: 0;
+  	margin-right: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  	user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
