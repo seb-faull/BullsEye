@@ -1,9 +1,10 @@
 $(function() {
-
 	//console.log('Dom has loaded');
 
 	// Global variables
-	var points = 0
+	var points = 0;
+	var sounds = true;
+	var audio = new Audio('sounds/gunshot.mp3');
 
 
 	$('.green-target').on('click', function (event) {
@@ -24,11 +25,16 @@ $(function() {
 		$('#points').html(function(i, val) { return val * 1 + 3 });
 	});
 
+	$('#arena').on('click', function (event) {
+		audio.play();
+	});
+
 	// Random animate path for each target element
 	$('.target').each(function (i, el) {
 		
 		animateDiv($(this));
 	});
+
 
 
 });
