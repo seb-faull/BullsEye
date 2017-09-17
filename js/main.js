@@ -61,23 +61,6 @@ function updateScore(/*quantity*/) {
 	// $('#points').html(points);
 }
 
-// function shotTarget(targetNum) {
-// 	if (targetNum.hasClass('red-target')) {
-// 		//targetNum.css('background-image', 'url(../images/targetGunShot.png)');
-// 		updateScore(3);
-// 	} else if (targetNum.hassClass('blue-target')) {
-// 		//targetNum.css('background-image', 'url(../images/targetGunShot.png)');
-// 		updateScore(2);
-// 	} else (targetNum.hasClass('green-target')) {
-// 		//targetNum.css('background-image', 'url(../images/targetGunShot.png)');
-// 		updateScore(1);
-// 	}
-// }
-
-
-
-
-
 
 
 

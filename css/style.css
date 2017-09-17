@@ -67,6 +67,8 @@ body {
   width: 1000px;
   height: 685px;
   margin: 50px auto 0 auto;
+  font-size: 35px;
+  font-family: "SF Archery Black";
   text-align: left;
   cursor: crosshair;
   border: solid black 10px;
@@ -82,7 +84,7 @@ body {
   right: 50px;
   bottom: 2px;
 	font-size: 35px;
-  font-family: "SF Archery Black SC Shaded";
+  font-family: "SF Archery Black";
   color: black;
 	width: 220px;
 	height:110px;
@@ -101,6 +103,57 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
 	user-select: none;
+}
+
+#life-container {
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+  bottom: 2px;
+  font-size: 35px;
+  font-family: "SF Archery Black";
+  color: black;
+  width: 300px;
+  height:110px;
+  margin-left: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#life-container h2 {
+  width: auto;
+  font-family: "SF Archery Black";
+  color: black;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.life {
+  height: 50px;
+  width: 50px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#life1 {
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+}
+
+#life2 {
+  position: absolute;
+  bottom: 10px;
+  left: 195px;
+}
+
+#life3 {
+  position: absolute;
+  bottom: 10px;
+  left: 250px;
 }
 
 
