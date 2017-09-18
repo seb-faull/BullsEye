@@ -11,18 +11,30 @@ $(function() {
 		console.log('Greens been clicked');
 		var $greenTarget = $('.green-target');
 		$('#points').html(function(i, val) { return val * 1 + 1 });
+		$greenTarget.attr('src', 'images/target-shot.png');
+		setTimeout(function() {
+			$greenTarget.attr('src', 'images/target.png');
+		}, 1000);
 	});
 
 	$('.blue-target').on('click', function (event) {
 		console.log('Blues been clicked!');
 		var $blueTarget = $('.blue-target');
 		$('#points').html(function(i, val) { return val * 1 + 2 });
+		$blueTarget.attr('src', 'images/target-shot.png');
+		setTimeout(function() {
+			$blueTarget.attr('src', 'images/target.png');
+		}, 1000);
 	});
 
 	$('.red-target').on('click', function (event) {
 		console.log('Reds been clicked!');
 		var $redTarget = $('.red-target');
-		$('#points').html(function(i, val) { return val * 1 + 3 });
+		$('#points').html(function(i, val) { return val * 1 + 4 });
+		$redTarget.attr('src', 'images/target-shot.png');
+		setTimeout(function() {
+			$redTarget.attr('src', 'images/target.png');
+		}, 1000);
 	});
 
 	$('#arena').on('click', function (event) {
@@ -56,16 +68,12 @@ function makeNewPosition() {
 
 function animateDiv($el) {
 	var newq = makeNewPosition();
-	$el.animate({ top: newq[0], left: newq[1] }, function(){
+	$el.animate({ top: newq[0], left: newq[1] }, 1000, function(){
 		animateDiv($el);
 	})
 }
 
 
-function updateScore(/*quantity*/) {
-	// points = points + quantity;
-	// $('#points').html(points);
-}
 
 
 
