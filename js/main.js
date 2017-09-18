@@ -117,6 +117,8 @@ $(function() {
 		if (totalLives === 0) {
 			$allTargets.stop();
 			$allTargets.hide();
+			var points = $('#points').html()
+			$('#scored-header').html('You Scored: ' + points);
 			$gameOver.fadeIn('slow');
 		}
 	}
