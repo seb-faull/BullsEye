@@ -5,40 +5,53 @@ $(function() {
 	var points = 0;
 	var sounds = true;
 	var audio = new Audio('sounds/gunshot.mp3');
+	var $blueTarget = $('.blue-target');
+	var $greenTarget = $('.green-target');
+	var $redTarget = $('.red-target');
 
 
-	$('.green-target').on('click', function (event) {
+	$greenTarget.on('click', function (event) {
 		console.log('Greens been clicked');
-		var $greenTarget = $('.green-target');
 		$('#points').html(function(i, val) { return val * 1 + 1 });
+
+		$greenTarget.addClass('hit');
+
 		$greenTarget.attr('src', 'images/target-shot.png');
 		setTimeout(function() {
 			$greenTarget.attr('src', 'images/target.png');
+			$greenTarget.removeClass('hit');
 		}, 1000);
 	});
 
-	$('.blue-target').on('click', function (event) {
+	$blueTarget.on('click', function (event) {
 		console.log('Blues been clicked!');
-		var $blueTarget = $('.blue-target');
 		$('#points').html(function(i, val) { return val * 1 + 2 });
+
+		$blueTarget.addClass('hit');
+
 		$blueTarget.attr('src', 'images/target-shot.png');
 		setTimeout(function() {
 			$blueTarget.attr('src', 'images/target.png');
+			$blueTarget.removeClass('hit');
 		}, 1000);
 	});
 
-	$('.red-target').on('click', function (event) {
+	$redTarget.on('click', function (event) {
 		console.log('Reds been clicked!');
-		var $redTarget = $('.red-target');
 		$('#points').html(function(i, val) { return val * 1 + 4 });
+
+		$redTarget.addClass('hit');
+
 		$redTarget.attr('src', 'images/target-shot.png');
 		setTimeout(function() {
 			$redTarget.attr('src', 'images/target.png');
+			$redTarget.removeClass('hit');
 		}, 1000);
 	});
 
 	$('#arena').on('click', function (event) {
 		audio.play();
+	
 	});
 
 	// Random animate path for each target element
@@ -46,7 +59,6 @@ $(function() {
 		
 		animateDiv($(this));
 	});
-
 
 
 });
