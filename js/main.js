@@ -3,10 +3,13 @@ $(function() {
 
 	// Global variables
 	var points = 0;
-	var $blueTarget = $('.blue-target');
 	var $greenTarget = $('.green-target');
+	var $blueTarget = $('.blue-target');
 	var $redTarget = $('.red-target');
+	var $allTargets = $('.target');
 	var totalLives = 3;
+	var $score = $('#score-container');
+	var $lives = $('#life-container');
 
 
 	$greenTarget.on('click', function (event) {
@@ -58,9 +61,10 @@ $(function() {
 			$redTarget.hasClass('hit'))) {
 			totalLives-- ;
 			numOfLives();
-			console.log(numOfLives);
 			
 		}
+
+		checkLives();
 	});
 
 	// Random animate path for each target element
@@ -86,7 +90,7 @@ $(function() {
 
 	function animateDiv($el) {
 		var newq = makeNewPosition();
-		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeOutCirc'], function(){
+		$el.animate({ top: newq[0], left: newq[1] }, 700, ['easeOutQuad'], function(){
 			animateDiv($el);
 		});
 	}
@@ -104,6 +108,15 @@ $(function() {
 				break;
 
 			case 0: $('#life1').fadeOut('fast');
+		}
+	}
+
+	function checkLives() {
+		if (totalLives === 0) {
+			$allTargets.stop();
+			$allTargets.hide();
+			$score.hide();
+			$lives.hide();
 		}
 	}
 
