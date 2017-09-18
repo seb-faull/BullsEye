@@ -156,6 +156,19 @@ body {
   left: 250px;
 }
 
+#game-over {
+  width: 600px;
+  height: 230px;
+  font-size: 35px;
+  font-family: "SF Archery Black";
+  text-align: left;
+  cursor: crosshair;
+  border: solid black 10px;
+  background-color: #E6E6E6;
+  z-index: 1;  
+  margin: 0 auto;
+}
+
 
 
 
