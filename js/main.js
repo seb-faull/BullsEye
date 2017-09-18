@@ -3,11 +3,10 @@ $(function() {
 
 	// Global variables
 	var points = 0;
-	var sounds = true;
-	var audio = new Audio('sounds/gunshot.mp3');
 	var $blueTarget = $('.blue-target');
 	var $greenTarget = $('.green-target');
 	var $redTarget = $('.red-target');
+	var totalLives = 3;
 
 
 	$greenTarget.on('click', function (event) {
@@ -50,8 +49,18 @@ $(function() {
 	});
 
 	$('#arena').on('click', function (event) {
+		var audio = new Audio('sounds/gunshot.mp3');
+
 		audio.play();
-	
+
+		if (!($greenTarget.hasClass('hit') ||
+			$blueTarget.hasClass('hit') ||
+			$redTarget.hasClass('hit'))) {
+			totalLives-- ;
+			numOfLives();
+			console.log(numOfLives);
+			
+		}
 	});
 
 	// Random animate path for each target element
@@ -61,33 +70,44 @@ $(function() {
 	});
 
 
+
+
+	function numOfLives() {
+		switch (totalLives) {
+			case 3: $('#life1, #life2, #life3').show();
+				break;
+
+			case 2: $('#life3').fadeOut('fast');
+				break;
+
+			case 1: $('#life2').fadeOut('fast');
+				break;
+
+			case 0: $('#life1').fadeOut('fast');
+		}
+	}
+
+	function makeNewPosition() {
+	    
+	    // Get viewport dimensions (remove the dimension of the div)
+	    var h = $('#target-arena').height() - 150;
+	    var w = $('#target-arena').width() - 50;
+	    
+	    var nh = Math.floor(Math.random() * h);
+	    var nw = Math.floor(Math.random() * w);
+	    
+	    return [nh,nw];    	    
+	}
+
+
+	function animateDiv($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, function(){
+			animateDiv($el);
+		});
+	}
+
 });
-
-
-function makeNewPosition() {
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $('#target-arena').height() - 150;
-    var w = $('#target-arena').width() - 50;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
-
-
-function animateDiv($el) {
-	var newq = makeNewPosition();
-	$el.animate({ top: newq[0], left: newq[1] }, 1000, function(){
-		animateDiv($el);
-	})
-}
-
-
-
-
 
 
 
