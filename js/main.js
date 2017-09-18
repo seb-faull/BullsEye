@@ -71,22 +71,6 @@ $(function() {
 
 
 
-
-	function numOfLives() {
-		switch (totalLives) {
-			case 3: $('#life1, #life2, #life3').show();
-				break;
-
-			case 2: $('#life3').fadeOut('fast');
-				break;
-
-			case 1: $('#life2').fadeOut('fast');
-				break;
-
-			case 0: $('#life1').fadeOut('fast');
-		}
-	}
-
 	function makeNewPosition() {
 	    
 	    // Get viewport dimensions (remove the dimension of the div)
@@ -102,9 +86,25 @@ $(function() {
 
 	function animateDiv($el) {
 		var newq = makeNewPosition();
-		$el.animate({ top: newq[0], left: newq[1] }, 1000, function(){
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeOutCirc'], function(){
 			animateDiv($el);
 		});
+	}
+
+
+	function numOfLives() {
+		switch (totalLives) {
+			case 3: $('#life1, #life2, #life3').show();
+				break;
+
+			case 2: $('#life3').fadeOut('fast');
+				break;
+
+			case 1: $('#life2').fadeOut('fast');
+				break;
+
+			case 0: $('#life1').fadeOut('fast');
+		}
 	}
 
 });
