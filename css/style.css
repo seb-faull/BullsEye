@@ -172,7 +172,7 @@ body {
 }
 
 #game-over-header {
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
   color: #f30000;
   margin: 0 auto;
@@ -182,15 +182,39 @@ body {
 }
 
 #scored-header {
-  padding-left: 60px;
   position: absolute;
-  bottom: 8px;
+  bottom: -2px;
+  left: 40px;
   color: #026102;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 
+#main-menu {
+  position: absolute;
+  bottom: 43px;
+  left: 415px;
+  background-color: #ec8e01;
+  border: solid black 7px;
+  border-radius: 15px;
+  height: 44px;
+  width: 130px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menu-text {
+  margin: 0;
+  font-size: 35px;
+  font-family: "SF Archery Black";
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-bottom: 0px;
+}
 
 
 

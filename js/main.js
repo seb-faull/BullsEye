@@ -113,7 +113,6 @@ $(function() {
 	}
 
 	function checkLives() {
-
 		if (totalLives === 0) {
 			$allTargets.stop();
 			$allTargets.hide();
