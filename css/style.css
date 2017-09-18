@@ -165,8 +165,30 @@ body {
   cursor: crosshair;
   border: solid black 10px;
   background-color: #E6E6E6;
-  z-index: 1;  
+  z-index: 1;
   margin: 0 auto;
+  position: relative;
+  bottom: 392px;
+}
+
+#game-over-header {
+  padding-top: 20px;
+  text-align: center;
+  color: #f30000;
+  margin: 0 auto;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#scored-header {
+  padding-left: 60px;
+  position: absolute;
+  bottom: 8px;
+  color: #026102;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 

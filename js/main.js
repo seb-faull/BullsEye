@@ -10,6 +10,7 @@ $(function() {
 	var totalLives = 3;
 	var $score = $('#score-container');
 	var $lives = $('#life-container');
+	var $gameOver = $('#game-over').hide();
 
 
 	$greenTarget.on('click', function (event) {
@@ -90,7 +91,7 @@ $(function() {
 
 	function animateDiv($el) {
 		var newq = makeNewPosition();
-		$el.animate({ top: newq[0], left: newq[1] }, 700, ['easeOutQuad'], function(){
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeOutQuad'], function(){
 			animateDiv($el);
 		});
 	}
@@ -112,15 +113,15 @@ $(function() {
 	}
 
 	function checkLives() {
+
 		if (totalLives === 0) {
 			$allTargets.stop();
 			$allTargets.hide();
-			$score.hide();
-			$lives.hide();
+			$gameOver.fadeIn('slow');
 		}
 	}
 
-	
+
 
 });
 
