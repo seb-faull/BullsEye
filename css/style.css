@@ -252,7 +252,7 @@ body {
   height: 530px;
   top: 16px;
   background-color: #E6E6E6;
-  border: solid black 10px;
+  border: solid #ec8e01 10px;
   border-radius: 15px;
   font-family: "SF Archery Black";
   margin: 50px auto 0 auto;
@@ -264,7 +264,6 @@ body {
 }
 
 #brief-header {
-
   font-family: "SF Archery Black";
   font-size: 40px;
   -moz-user-select: none;
@@ -273,7 +272,6 @@ body {
 }
 
 #brief-paragraph {
-
   font-family: "SF Archery Black";
   font-size: 25px;
   -moz-user-select: none;
@@ -282,9 +280,32 @@ body {
 }
 
 .left {
-  margin-left: 50px;
+  margin-left: 30px;
   float: left;
-  width: 400px;
+  width: 360px;
+  display: inline-block;
+}
+
+#how-to-play-header {
+  font-family: "SF Archery Black";
+  font-size: 40px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#how-to-play-paragraph {
+  font-family: "SF Archery Black";
+  font-size: 25px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.right {
+  margin-right: 30px;
+  float: right;
+  width: 360px;
   display: inline-block;
 }
 

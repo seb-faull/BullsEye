@@ -23,7 +23,6 @@ $(function() {
 		setTimeout(function() {
 			$instructionScreen.fadeIn('slow');
 		}, 500);
-
 	}, 2000);
 
 
