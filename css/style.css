@@ -266,6 +266,7 @@ body {
 #brief-header {
   font-family: "SF Archery Black";
   font-size: 40px;
+  margin-bottom: -5px;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -280,7 +281,7 @@ body {
 }
 
 .left {
-  margin-left: 30px;
+  margin-left: 40px;
   float: left;
   width: 360px;
   display: inline-block;
@@ -289,6 +290,7 @@ body {
 #how-to-play-header {
   font-family: "SF Archery Black";
   font-size: 40px;
+  margin-bottom: -5px;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -303,7 +305,7 @@ body {
 }
 
 .right {
-  margin-right: 30px;
+  margin-right: 40px;
   float: right;
   width: 360px;
   display: inline-block;
@@ -312,7 +314,7 @@ body {
 .bottom {
   position: absolute;
   bottom: 30px;
-  right: 50px;
+  right: 135px;
   width: 800px;
   display: inline-block;
 }
@@ -350,6 +352,31 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+#play {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  background-color: #ec8e01;
+  border: solid black 7px;
+  border-radius: 15px;
+  height: 44px;
+  width: 130px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#play-text {
+  margin: 0;
+  font-size: 35px;
+  font-family: "SF Archery Black";
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-bottom: 0px; 
 }
 
 

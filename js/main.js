@@ -3,6 +3,7 @@ $(function() {
 
 	// Global variables
 	var points = 0;
+	var $pointsValue = $('#points')
 	var $greenTarget = $('.green-target');
 	var $blueTarget = $('.blue-target');
 	var $redTarget = $('.red-target');
@@ -14,6 +15,8 @@ $(function() {
 	var $cover = $('#cover');
 	var $instructionScreen = $('#instruction-screen');
 	var $arena = $('#arena');
+	var $play = $('#play');
+	var $mainMenu = $('#main-menu');
 
 
 	$cover.fadeIn('slow');
@@ -25,12 +28,32 @@ $(function() {
 		}, 500);
 	}, 2000);
 
+	$play.on('click', function (event) {
+		$instructionScreen.fadeOut('slow');
+
+		setTimeout(function() {
+			$arena.fadeIn('slow');
+		}, 500);
+
+		restartGame ()
+	});
+
+	$mainMenu.on('click', function (event) {
+		$arena.fadeOut('slow');
+
+		setTimeout(function() {
+			$instructionScreen.fadeIn('slow');
+		}, 500);
+
+		restartGame ()
+	});
 
 
 	$greenTarget.on('click', function (event) {
 		console.log('Greens been clicked');
-		$('#points').html(function(i, val) { return val * 1 + 1 });
-
+		// $(' #points').html(function(i, val) { return val * 1 + 1 });
+		points += 1;
+		$pointsValue.html(points);
 		$greenTarget.addClass('hit');
 
 		$greenTarget.attr('src', 'images/target-shot.png');
@@ -42,7 +65,9 @@ $(function() {
 
 	$blueTarget.on('click', function (event) {
 		console.log('Blues been clicked!');
-		$('#points').html(function(i, val) { return val * 1 + 2 });
+		// $('#points').html(function(i, val) { return val * 1 + 2 });
+		points += 2;
+		$pointsValue.html(points);
 
 		$blueTarget.addClass('hit');
 
@@ -55,7 +80,9 @@ $(function() {
 
 	$redTarget.on('click', function (event) {
 		console.log('Reds been clicked!');
-		$('#points').html(function(i, val) { return val * 1 + 4 });
+		// $('#points').html(function(i, val) { return val * 1 + 4 });
+		points += 4;
+		$pointsValue.html(points);
 
 		$redTarget.addClass('hit');
 
@@ -142,6 +169,20 @@ $(function() {
 			$('#scored-header').html('You Scored: ' + points);
 			$gameOver.fadeIn('slow');
 		}
+	}
+
+	function restartGame() {
+		points = 0;
+		$pointsValue.html(points);
+		totalLives = 3;
+		$gameOver.hide();
+		numOfLives();
+		$allTargets.show();
+
+		$('.target').each(function (i, el) {
+		
+			animateDiv($(this));
+		});
 	}
 
 
