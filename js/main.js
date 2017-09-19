@@ -12,15 +12,14 @@ $(function() {
 	var $lives = $('#life-container');
 	var $gameOver = $('#game-over').hide();
 	var $cover = $('#cover');
+	var $instructionScreen = $('#instruction-screen');
 	var $arena = $('#arena');
 
 	setTimeout(function() {
-		$cover.fadeOut('slow');
+		$cover.fadeOut('slow', function () {
+			$instructionScreen.fadeIn('slow');
+		});
 	}, 3000);
-
-	setTimeout(function() {
-		$arena.slideDown('slow');
-	}, 3500);
 
 
 	$greenTarget.on('click', function (event) {
@@ -62,7 +61,9 @@ $(function() {
 		}, 1000);
 	});
 
-	$('#arena').on('click', function (event) {
+	//Constantly checks number of lives whilst losing a life when targets are missed
+		//Arena audio
+	$arena.on('click', function (event) {
 		var audio = new Audio('sounds/gunshot.mp3');
 
 		audio.play();
@@ -78,12 +79,18 @@ $(function() {
 		checkLives();
 	});
 
+	//Instruction audio
+	$instructionScreen.on('click', function (event) {
+		var audio = new Audio('sounds/gunshot.mp3');
+
+		audio.play();
+	});
+
 	// Random animate path for each target element
 	$('.target').each(function (i, el) {
 		
 		animateDiv($(this));
 	});
-
 
 
 	function makeNewPosition() {

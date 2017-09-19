@@ -227,7 +227,36 @@ body {
   background-repeat: none;
 }
 
+#instruction-screen {
+  position: relative;
+  width: 1000px;
+  height: 685px;
+  background-image: url(../images/arenaBackgroundImage.jpg);
+  border: solid black 10px;
+  background-size: 1000px 685px;
+  background-repeat: none;
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  cursor: crosshair;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
+#instruction-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #E6E6E6;
+  border: solid black 7px;
+  border-radius: 15px;
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  cursor: crosshair;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 
 
