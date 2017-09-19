@@ -76,6 +76,7 @@ body {
   background-size: 1000px 685px;
   background-repeat: none;
   overflow: hidden;
+  display: none;
 }
 
 #score-container {
@@ -225,6 +226,7 @@ body {
   background-image: url(../images/cover-image_bullseye.png);
   background-size: 1000px 685px;
   background-repeat: none;
+  display: none;
 }
 
 #instruction-screen {
@@ -241,15 +243,18 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  display: none;
 }
 
 #instruction-container {
   position: relative;
-  width: 600px;
-  height: 400px;
+  width: 880px;
+  height: 530px;
+  top: 16px;
   background-color: #E6E6E6;
-  border: solid black 7px;
+  border: solid black 10px;
   border-radius: 15px;
+  font-family: "SF Archery Black";
   margin: 50px auto 0 auto;
   overflow: hidden;
   cursor: crosshair;
@@ -258,6 +263,30 @@ body {
   user-select: none;
 }
 
+#brief-header {
+
+  font-family: "SF Archery Black";
+  font-size: 40px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#brief-paragraph {
+
+  font-family: "SF Archery Black";
+  font-size: 25px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.left {
+  margin-left: 50px;
+  float: left;
+  width: 400px;
+  display: inline-block;
+}
 
 
 

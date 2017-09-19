@@ -15,11 +15,17 @@ $(function() {
 	var $instructionScreen = $('#instruction-screen');
 	var $arena = $('#arena');
 
+
+	$cover.fadeIn('slow');
 	setTimeout(function() {
-		$cover.fadeOut('slow', function () {
+		$cover.fadeOut('slow');
+
+		setTimeout(function() {
 			$instructionScreen.fadeIn('slow');
-		});
-	}, 3000);
+		}, 500);
+
+	}, 2000);
+
 
 
 	$greenTarget.on('click', function (event) {
