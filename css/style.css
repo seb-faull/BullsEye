@@ -216,6 +216,17 @@ body {
   margin-bottom: 0px;
 }
 
+#cover {
+  position: relative;
+  width: 1000px;
+  height: 685px;
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  background-image: url(../images/cover-image_bullseye.png);
+  background-size: 1000px 685px;
+  background-repeat: none;
+}
+
 
 
 

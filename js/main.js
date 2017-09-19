@@ -11,6 +11,16 @@ $(function() {
 	var $score = $('#score-container');
 	var $lives = $('#life-container');
 	var $gameOver = $('#game-over').hide();
+	var $cover = $('#cover');
+	var $arena = $('#arena');
+
+	setTimeout(function() {
+		$cover.fadeOut('slow');
+	}, 3000);
+
+	setTimeout(function() {
+		$arena.slideDown('slow');
+	}, 3500);
 
 
 	$greenTarget.on('click', function (event) {
