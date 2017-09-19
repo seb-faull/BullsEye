@@ -309,6 +309,48 @@ body {
   display: inline-block;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  width: 800px;
+  display: inline-block;
+}
+
+.demo-target {
+  width: 200px;
+  display: inline-block;
+}
+.target-instructions {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#green-target-instructions {
+  background-color: #00ff0a;
+}
+
+#blue-target-instructions {
+  background-color: #00c4ff;
+}
+
+#red-target-instructions {
+  background-color: #ff0000;
+}
+
+.instruction-points {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "SF Archery Black";
+  font-size: 25px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 
 
