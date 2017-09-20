@@ -17,6 +17,9 @@ $(function() {
 	var $arena = $('#arena');
 	var $play = $('#play');
 	var $mainMenu = $('#main-menu');
+	var $gun = $("#gun-image");
+	var gunCenter = [$gun.offset().left + $gun.width()/2, $gun.offset().top + $gun.height()/2 ];
+	var $circle = $('#circle');
 
 	//Intro
 		//Cover image & Instructions
@@ -35,6 +38,8 @@ $(function() {
 
 		setTimeout(function() {
 			$arena.fadeIn('slow');
+			// $gun.show();
+			// $circle.show();
 		}, 500);
 
 		restartGame ()
@@ -52,7 +57,7 @@ $(function() {
 	$greenTarget.on('click', function (event) {
 		console.log('Greens been clicked');
 
-		points += 1;
+		points += 10;
 		$pointsValue.html(points);
 		$greenTarget.addClass('hit');
 
@@ -66,7 +71,7 @@ $(function() {
 	$blueTarget.on('click', function (event) {
 		console.log('Blues been clicked!');
 
-		points += 2;
+		points += 20;
 		$pointsValue.html(points);
 
 		$blueTarget.addClass('hit');
@@ -81,7 +86,7 @@ $(function() {
 	$redTarget.on('click', function (event) {
 		console.log('Reds been clicked!');
 
-		points += 4;
+		points += 40;
 		$pointsValue.html(points);
 
 		$redTarget.addClass('hit');
@@ -112,24 +117,19 @@ $(function() {
 	});
 
 	
-
+	//Gun Mouse Over
 	$('#gun-image').css({
 		top: $arena.offset().top + ($arena.height()) - 100,
 		left: $arena.offset().left + ($arena.width() / 2) - 12
 	});
 
-	var $box = $("#gun-image");
-	var boxCenter = [$box.offset().left + $box.width()/2, $box.offset().top + $box.height()/2 ];
-
-
-
 	$('#arena').mousemove(function(e){    
 
-		var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+		var angle = Math.atan2(e.pageX- gunCenter[0],- (e.pageY- gunCenter[1]) )*(180/Math.PI);	    
 	    
-	    $box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
-	    $box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
-	    $box.css({ 'transform': 'rotate(' + angle + 'deg)'});
+	    $gun.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
+	    $gun.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+	    $gun.css({ 'transform': 'rotate(' + angle + 'deg)'});
 	    
 	});
 
