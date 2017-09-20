@@ -381,13 +381,6 @@ body {
   margin-bottom: 0px; 
 }
 
-.gun-container {
-  position: absolute;
-  bottom: -9px;
-  left: 500px;
-  /*display: inline-block;*/
-}
-
 #gun-image {
   position: absolute;
   width: 130px;
@@ -397,17 +390,15 @@ body {
   transform-origin: 50% bottom;
 }
 
-.box{
-    background-color: black;
-    width: 100px;
-    height: 30px;
-    
-    position: fixed;
-    left: 200px;
-    top: 200px;
+#circle {
+  background-color: #835C3B;
+  position: absolute;
+  left: 535px;
+  bottom: 13px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
-
-
 
 
 
