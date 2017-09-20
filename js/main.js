@@ -17,8 +17,10 @@ $(function() {
 	var $arena = $('#arena');
 	var $play = $('#play');
 	var $mainMenu = $('#main-menu');
+	var $gun = $('.gun-container');
 
-
+	//Intro
+		//Cover image & Instructions
 	$cover.fadeIn('slow');
 	setTimeout(function() {
 		$cover.fadeOut('slow');
@@ -28,6 +30,7 @@ $(function() {
 		}, 500);
 	}, 2000);
 
+		//Instructions fade out
 	$play.on('click', function (event) {
 		$instructionScreen.fadeOut('slow');
 
@@ -44,14 +47,12 @@ $(function() {
 		setTimeout(function() {
 			$instructionScreen.fadeIn('slow');
 		}, 500);
-
-		restartGame ()
 	});
 
-
+	//In play
 	$greenTarget.on('click', function (event) {
 		console.log('Greens been clicked');
-		// $(' #points').html(function(i, val) { return val * 1 + 1 });
+
 		points += 1;
 		$pointsValue.html(points);
 		$greenTarget.addClass('hit');
@@ -65,7 +66,7 @@ $(function() {
 
 	$blueTarget.on('click', function (event) {
 		console.log('Blues been clicked!');
-		// $('#points').html(function(i, val) { return val * 1 + 2 });
+
 		points += 2;
 		$pointsValue.html(points);
 
@@ -80,7 +81,7 @@ $(function() {
 
 	$redTarget.on('click', function (event) {
 		console.log('Reds been clicked!');
-		// $('#points').html(function(i, val) { return val * 1 + 4 });
+		
 		points += 4;
 		$pointsValue.html(points);
 
