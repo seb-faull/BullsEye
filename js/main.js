@@ -39,7 +39,7 @@ $(function() {
 		var audio = new Audio('sounds/gunshot.mp3');
 
 		audio.play();
-		
+
 		var $currentButton = $(this);
 		$modeScreen.fadeOut('slow');
 		
@@ -222,8 +222,6 @@ $(function() {
 		numOfLives();
 		$allTargets.show();
 	}
-
-
 
 
 });
