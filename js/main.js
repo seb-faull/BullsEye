@@ -116,7 +116,8 @@ $(function() {
 		checkLives();
 	});
 
-		
+	
+	//Shotgun Mouse Tracking	
 	var box = $("#gun-image");
 
 	$(document).mousemove(function(e){    
@@ -131,8 +132,7 @@ $(function() {
 	    
 	});
 
-	   
-	   
+     
 
 	//Instruction audio
 	$instructionScreen.on('click', function (event) {
@@ -193,7 +193,7 @@ $(function() {
 
 	function animateDivInOutExpo($el) {
 		var newq = makeNewPosition();
-		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInOutExpo'], function(){
+		$el.animate({ top: newq[0], left: newq[1] }, 800, ['easeInOutExpo'], function(){
 			animateDivInOutExpo($el);
 		});
 	}
