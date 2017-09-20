@@ -20,6 +20,7 @@ $(function() {
 	var $gun = $("#gun-image");
 	var gunCenter = [$gun.offset().left + $gun.width()/2, $gun.offset().top + $gun.height()/2 ];
 	var $circle = $('#circle');
+	var $gameModesScreen = $('#game-modes-screen');
 
 	//Intro
 		//Cover image & Instructions
@@ -37,12 +38,17 @@ $(function() {
 		$instructionScreen.fadeOut('slow');
 
 		setTimeout(function() {
-			$arena.fadeIn('slow');
-			// $gun.show();
-			// $circle.show();
+			$gameModesScreen.fadeIn('slow');
 		}, 500);
 
-		restartGame ()
+		//restartGame ()
+	});
+
+	//Game Modes screen audio
+	$gameModesScreen.on('click', function (event) {
+		var audio = new Audio('sounds/gunshot.mp3');
+
+		audio.play();
 	});
 
 	$mainMenu.on('click', function (event) {
@@ -161,7 +167,7 @@ $(function() {
 	    return [nh,nw];    	    
 	}
 
-	//Game mode functions (easi in animations)
+	//Game mode functions (easin in animations)
 
 	function animateDivQuad($el) {
 		var newq = makeNewPosition();
