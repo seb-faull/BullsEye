@@ -142,10 +142,11 @@ $(function() {
 		audio.play();
 	});
 
+
 	// Random animate path for each target element
 	$('.target').each(function (i, el) {
 		
-		animateDiv($(this));
+		animateDivInOutQuint($(this));
 	});
 
 
@@ -161,14 +162,59 @@ $(function() {
 	    return [nh,nw];    	    
 	}
 
+	//Game mode functions (easi in animations)
 
-	function animateDiv($el) {
+	function animateDivQuad($el) {
 		var newq = makeNewPosition();
 		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeOutQuad'], function(){
-			animateDiv($el);
+			animateDivQuad($el);
 		});
 	}
 
+	function animateDivOutSine($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeOutSine'], function(){
+			animateDivOutSine($el);
+		});
+	}
+
+	function animateDivInOutCubic($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInOutCubic'], function(){
+			animateDivInOutCubic($el);
+		});
+	}
+
+	function animateDivInOutQuint($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInOutQuint'], function(){
+			animateDivInOutQuint($el);
+		});
+	}
+
+	function animateDivInOutExpo($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInOutExpo'], function(){
+			animateDivInOutExpo($el);
+		});
+	}
+
+	function animateDivInExpo($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInExpo'], function(){
+			animateDivInExpo($el);
+		});
+	}
+
+	function animateDivInOutCirc($el) {
+		var newq = makeNewPosition();
+		$el.animate({ top: newq[0], left: newq[1] }, 1000, ['easeInOutCirc'], function(){
+			animateDivInOutCirc($el);
+		});
+	}
+
+
+	//-------------------------------------------------------
 
 	function numOfLives() {
 		switch (totalLives) {
