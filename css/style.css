@@ -391,10 +391,10 @@ body {
 }
 
 #circle {
-  background-color: #835C3B;
+  background-color: #4e3622;
   position: absolute;
   left: 535px;
-  bottom: 13px;
+  bottom: 11px;
   border-radius: 100%;
   width: 50px;
   height: 50px;
