@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://fiddle.jshell.net/opherv/ddGHz/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./jquery-1.9.1.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    .box{
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+  </style>
+
+  <title> by opherv</title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+var box=$(".box");
+var boxCenter=[box.offset().left+box.width()/2, box.offset().top+box.height()/2];
+
+$(document).mousemove(function(e){    
+    
+        
+	var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+    
+    box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
+    box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+    box.css({ 'transform': 'rotate(' + angle + 'deg)'});
+    
+});
+
+   
+});//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <div class="box" style="transform: rotate(-112.343deg);"></div>
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "ddGHz"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>

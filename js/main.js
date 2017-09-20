@@ -17,7 +17,6 @@ $(function() {
 	var $arena = $('#arena');
 	var $play = $('#play');
 	var $mainMenu = $('#main-menu');
-	var $gun = $('.gun-container');
 
 	//Intro
 		//Cover image & Instructions
@@ -81,7 +80,7 @@ $(function() {
 
 	$redTarget.on('click', function (event) {
 		console.log('Reds been clicked!');
-		
+
 		points += 4;
 		$pointsValue.html(points);
 
@@ -111,6 +110,53 @@ $(function() {
 
 		checkLives();
 	});
+
+	// var radAngle = Math.atan2((e.pageX - shipCenter[0]),-(e.pageY - shipCenter[1]));
+ //          var degAngle = (radAngle * (180 / (Math.PI)));
+ //        // console.log(degAngle);
+ //          $("#ship").css({'transform' : 'rotate('+ (degAngle) +'deg)'});
+
+	// var $gun = $('#gun-image');
+	// var gunCenter = [$('#gun-image').offset().left + $('#gun-image').width() / 2, $('#gun-image').offset().top + $('#gun-image').height() / 2];
+
+
+	// $(document).mousemove (function(e) {
+	// 	// var angle = Math.atan2(e.pageX- $gunCenter[0], - (e.pageY- $gunCenter[1]) ) * (180/Math.PI);
+
+	// 	var radAngle = Math.atan2((e.pageX - gunCenter[0]),-(e.pageY - gunCenter[1]));
+ //         var degAngle = (radAngle * (180 / (Math.PI)));
+ //        // console.log(degAngle);
+ //          $("#gun-image").css({'transform' : 'rotate('+ (degAngle) +'deg)'});
+ //          $("#gun-image").css({'-webkit-transform' : 'rotate('+ (degAngle) +'deg)'});
+ //          $("#gun-image").css({'-moz-transform' : 'rotate('+ (degAngle) +'deg)'});
+
+	// 		// $gun.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});
+	// 		// $gun.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+	// 		// $gun.css({ 'transform': 'rotate(' + angle + 'deg)'});
+	// });
+
+
+$('#gun-image').css({
+	top: $arena.offset().top + ($arena.height()),
+	left: $arena.offset().left + ($arena.width() / 2)
+});
+
+var $box = $("#gun-image");
+var boxCenter = [$box.offset().left + $box.width()/2, $box.offset().top + $box.height()/2 ];
+
+
+
+$('#arena').mousemove(function(e){    
+
+	var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+    
+    $box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
+    $box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+    $box.css({ 'transform': 'rotate(' + angle + 'deg)'});
+    
+});
+
+   
 
 	//Instruction audio
 	$instructionScreen.on('click', function (event) {
@@ -185,6 +231,7 @@ $(function() {
 			animateDiv($(this));
 		});
 	}
+
 
 
 
