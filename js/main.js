@@ -116,24 +116,23 @@ $(function() {
 		checkLives();
 	});
 
-	
-	//Gun Mouse Over
-	$('#gun-image').css({
-		top: $arena.offset().top + ($arena.height()) - 100,
-		left: $arena.offset().left + ($arena.width() / 2) - 12
-	});
+		
+	var box = $("#gun-image");
 
-	$('#arena').mousemove(function(e){    
-
-		var angle = Math.atan2(e.pageX- gunCenter[0],- (e.pageY- gunCenter[1]) )*(180/Math.PI);	    
+	$(document).mousemove(function(e){    
 	    
-	    $gun.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
-	    $gun.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
-	    $gun.css({ 'transform': 'rotate(' + angle + 'deg)'});
+    	var boxCenter = [box.offset().left+box.width()/2, box.offset().top+box.height()/2];
+
+		var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+	    
+	    box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
+	    box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+	    box.css({ 'transform': 'rotate(' + angle + 'deg)'});
 	    
 	});
 
-   
+	   
+	   
 
 	//Instruction audio
 	$instructionScreen.on('click', function (event) {

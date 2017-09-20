@@ -96,7 +96,7 @@ body {
 }
 
 #score-container h2 {
-	width: auto;
+	width: 300px;
   font-family: "SF Archery Black";
   color: black;
 	padding-right: 0;
@@ -385,8 +385,8 @@ body {
   position: absolute;
   width: 130px;
   height: 120px;
-  bottom: 100px;
-  left: 500px;
+  bottom: 45px;
+  left: 490px;
   transform-origin: 50% bottom;
 /*  display: none;*/
 }
