@@ -22,6 +22,9 @@ body {
   -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .blue-target {
@@ -36,6 +39,9 @@ body {
   -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .red-target {
@@ -50,6 +56,9 @@ body {
   -moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 #target-arena {
@@ -322,6 +331,9 @@ body {
 .demo-target {
   width: 200px;
   display: inline-block;
+  user-drag: none; 
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .target-instructions {

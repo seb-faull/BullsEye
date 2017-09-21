@@ -1,6 +1,5 @@
 $(function() {
-	//console.log('Dom has loaded');
-
+	
 	// Global variables
 	var points = 0;
 	var $pointsValue = $('#points')
@@ -155,8 +154,6 @@ $(function() {
 	    
 	});
 
-   
-
 	//Instruction audio
 	$instructionScreen.on('click', function (event) {
 		var audio = new Audio('sounds/gunshot.mp3');
@@ -171,8 +168,6 @@ $(function() {
 			animateDiv($(this));
 		});
 	}
-
-
 
 	function makeNewPosition() {
 	    
