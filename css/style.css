@@ -386,18 +386,24 @@ body {
   width: 130px;
   height: 120px;
   bottom: 45px;
-  left: 490px;
+  left: 438px;
   transform-origin: 50% bottom;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #circle {
   background-color: #4e3622;
   position: absolute;
-  left: 535px;
+  left: 482px;
   bottom: 11px;
   border-radius: 100%;
   width: 50px;
   height: 50px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #game-modes-screen {
