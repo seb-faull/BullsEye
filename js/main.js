@@ -41,6 +41,12 @@ $(function() {
 		audio.play();
 
 		var $currentButton = $(this);
+		if ($currentButton.attr('id') == 'mode5') {
+			$greenTarget.addClass('jelly');
+			$blueTarget.addClass('jelly');
+			$redTarget.addClass('jelly');
+		}
+
 		$modeScreen.fadeOut('slow');
 		
 		setTimeout(function() {
