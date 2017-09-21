@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- niall is aweome -->
-	<title>BullsEye</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-	<script src="js/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-target.png">
-</head>
-<body>
+	<head>
+	<!-- niall is aweome -->
+		<title>BullsEye</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-target.png">
+	</head>
+	<body>
 
 
-	<!-- Logo screen -->
-	<div id="cover"></div>
+		<!-- Logo screen -->
+		<div id="cover"></div>
 
 
-	<!-- Instruction screen -->
-	<div id="instruction-screen">
-		<div id="instruction-container">
-			<div class="left">
-				<h2 id="brief-header">Brief</h2>
-				<p id="brief-paragraph">Welcome to the firing range.
-				You are here to test your close-to-medium range shooting skills. Your hand-eye coordination, agility, sharpness and awareness is what will give you the upper hand.</p>
-			</div>
-
-			<div class="right">
-				<h2 id="how-to-play-header">How To Play</h2>
-				<p id="how-to-play-paragraph">Shoot the targets to get as much points as you can. You have 3 lives. Don't miss or you lose a life.</p>
-			</div>
-
-			<!-- Targets -->
-			<div class="bottom">
-				<div class="demo-target">
-					<p class="instruction-points">10 POINTS</p>
-					<img class="target-instructions" id="green-target-instructions" src="images/target.png">
+		<!-- Instruction screen -->
+		<div id="instruction-screen">
+			<div id="instruction-container">
+				<div class="left">
+					<h2 id="brief-header">Brief</h2>
+					<p id="brief-paragraph">Welcome to the firing range.
+					You are here to test your close-to-medium range shooting skills. Your hand-eye coordination, agility, sharpness and awareness is what will give you the upper hand.</p>
 				</div>
 
-				<div class="demo-target">
-					<p class="instruction-points">20 POINTS</p>
-					<img class="target-instructions" id="blue-target-instructions" src="images/target.png">
+				<div class="right">
+					<h2 id="how-to-play-header">How To Play</h2>
+					<p id="how-to-play-paragraph">Shoot the targets to get as much points as you can. You have 3 lives. Don't miss or you lose a life.</p>
 				</div>
 
-				<div class="demo-target">
-					<p class="instruction-points">40 POINTS</p>
-					<img class="target-instructions" id="red-target-instructions" src="images/target.png">
+				<!-- Targets -->
+				<div class="bottom">
+					<div class="demo-target">
+						<p class="instruction-points">10 POINTS</p>
+						<img class="target-instructions" id="green-target-instructions" src="images/target.png">
+					</div>
+
+					<div class="demo-target">
+						<p class="instruction-points">20 POINTS</p>
+						<img class="target-instructions" id="blue-target-instructions" src="images/target.png">
+					</div>
+
+					<div class="demo-target">
+						<p class="instruction-points">40 POINTS</p>
+						<img class="target-instructions" id="red-target-instructions" src="images/target.png">
+					</div>
+				</div>
+
+				<div id="play">
+					<p id="play-text">MODE</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="game-modes-screen">
+			<div id="game-modes">
+				<h2 id="mode-header">GAME MODES</h2>
+				<div id="group-modes">
+					<p id="mode1" data-ease="easeOutQuad" data-time="1000">QUAD</p>
+					<p id="mode2" data-ease="easeOutSine" data-time="1000">SINE</p>
+					<p id="mode3" data-ease="easeInOutCubic" data-time="1000">CUBIC</p>
+					<p id="mode4" data-ease="easeInOutQuint" data-time="1000">QUINT</p>
+					<p id="mode5" class="jelly" data-ease="easeInOutExpo" data-time="800">DRUNK</p>
+					<p id="mode6" data-ease="easeInExpo" data-time="1000">EXPO</p>
+					<p id="mode7" data-ease="easeInOutCirc" data-time="1000">CIRC</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Arena -->
+		<div id="arena">
+			<div id="target-arena">
+				<img class="green-target target" src="images/target.png">
+				<!-- <img class="green-target target" src="images/target.png"> -->
+
+				<img class="blue-target target" src="images/target.png">
+				<!-- <img class="blue-target target" src="images/target.png"> -->
+
+				<img class="red-target target" src="images/target.png">
+				<!-- <img class="red-target target" src="images/target.png"> -->
+			</div>
+
+			<div id="score-container">
+	        	<h2>Score: <span id="points">0</span> </h2>
+	    	</div>
+
+	    	<div id="life-container">
+	    		<h2>Lives:</h2>
+	    		<img id="life1" class="life" src="images/heart.png">
+	    		<img id="life2" class="life" src="images/heart.png">
+	    		<img id="life3" class="life" src="images/heart.png">
+	    	</div>
+
+
+	    	<div id="game-over">
+				<h2 id="game-over-header">GAME OVER</h2>
+				<h2 id="scored-header">You Scored:</h2>
+				<div id="main-menu">
+					<p id="menu-text">MENU</p>
 				</div>
 			</div>
 
-			<div id="play">
-				<p id="play-text">MODE</p>
+			<div>
+				<img id="gun-image" src="images/shotgun.png">
+				<div id="circle"></div>
 			</div>
 
 		</div>
-	</div>
-
-	<div id="game-modes-screen">
-		<div id="game-modes">
-			<h2 id="mode-header">GAME MODES</h2>
-			<div id="group-modes">
-				<p id="mode1" data-ease="easeOutQuad" data-time="1000">QUAD</p>
-				<p id="mode2" data-ease="easeOutSine" data-time="1000">SINE</p>
-				<p id="mode3" data-ease="easeInOutCubic" data-time="1000">CUBIC</p>
-				<p id="mode4" data-ease="easeInOutQuint" data-time="1000">QUINT</p>
-				<p id="mode5" class="jelly" data-ease="easeInOutExpo" data-time="800">DRUNK</p>
-				<p id="mode6" data-ease="easeInExpo" data-time="1000">EXPO</p>
-				<p id="mode7" data-ease="easeInOutCirc" data-time="1000">CIRC</p>
-			</div>
-		</div>
-	</div>
-
-	<!-- Arena -->
-	<div id="arena">
-		<div id="target-arena">
-			<img class="green-target target" src="images/target.png">
-			<!-- <img class="green-target target" src="images/target.png"> -->
-
-			<img class="blue-target target" src="images/target.png">
-			<!-- <img class="blue-target target" src="images/target.png"> -->
-
-			<img class="red-target target" src="images/target.png">
-			<!-- <img class="red-target target" src="images/target.png"> -->
-		</div>
-
-		<div id="score-container">
-        	<h2>Score: <span id="points">0</span> </h2>
-    	</div>
-
-    	<div id="life-container">
-    		<h2>Lives:</h2>
-    		<img id="life1" class="life" src="images/heart.png">
-    		<img id="life2" class="life" src="images/heart.png">
-    		<img id="life3" class="life" src="images/heart.png">
-    	</div>
 
 
-    	<div id="game-over">
-			<h2 id="game-over-header">GAME OVER</h2>
-			<h2 id="scored-header">You Scored:</h2>
-			<div id="main-menu">
-				<p id="menu-text">MENU</p>
-			</div>
-		</div>
-
-		<div>
-			<img id="gun-image" src="images/shotgun.png">
-			<div id="circle"></div>
-		</div>
-
-	</div>
-
-
-</body>
+	</body>
 </html>
