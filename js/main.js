@@ -227,6 +227,9 @@ $(function() {
 		$gameOver.hide();
 		numOfLives();
 		$allTargets.show();
+		$greenTarget.removeClass('jelly');
+		$blueTarget.removeClass('jelly');
+		$redTarget.removeClass('jelly');
 	}
 
 
